@@ -1,9 +1,12 @@
 pub mod is_palindrom;
+pub mod lengeth_of_lat_word;
 pub mod longest_common_prefix;
 pub mod merge_two_lists;
+pub mod plus_one;
 pub mod remove_dumplicates;
 pub mod remove_element;
 pub mod roman_to_num;
+pub mod search_insert_position;
 pub mod str_str;
 pub mod two_sum;
 pub mod valid_parentheses;

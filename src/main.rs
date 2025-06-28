@@ -50,10 +50,22 @@ fn main() {
 
     // println!("{:?}", result);
 
-    let haystack = "ssadbutsad".to_string();
-    let neddle = "sad".to_string();
-    let result = solve_problems::str_str::str_str(haystack, neddle);
-    println!("{}", result);
+    // let haystack = "ssadbutsad".to_string();
+    // let neddle = "sad".to_string();
+    // let result = solve_problems::str_str::str_str(haystack, neddle);
+    // println!("{}", result);
+    // let nums = vec![1, 2, 3, 4, 6];
+    // let target = 7;
+    // let result = solve_problems::search_insert_position::search_insert(nums, target);
+    // println!("{}", result);
+
+    // let s = "i am study for rust 88888".to_string();
+
+    // let result = solve_problems::lengeth_of_lat_word::length_of_last_word(s);
+    // println!("{}", result);
+    let digits = vec![1, 9, 9];
+    let result = solve_problems::plus_one::plus_one(digits);
+    println!("{:?}", result)
 }
 
 // fn vec_to_list(nums: Vec<i32>) -> Option<Box<solve_problems::merge_two_lists::ListNode>> {
