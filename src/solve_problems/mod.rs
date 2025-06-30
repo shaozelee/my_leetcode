@@ -1,7 +1,14 @@
+pub mod add_binary;
+pub mod climb_stairs;
+pub mod delete_duplicates;
+pub mod inorder_traversal;
 pub mod is_palindrom;
+pub mod is_same_tree;
 pub mod lengeth_of_lat_word;
 pub mod longest_common_prefix;
+pub mod merge_sort_array;
 pub mod merge_two_lists;
+pub mod my_sqar;
 pub mod plus_one;
 pub mod remove_dumplicates;
 pub mod remove_element;

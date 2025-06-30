@@ -1,5 +1,8 @@
 #![allow(dead_code)]
 
+use solve_problems::inorder_traversal::*;
+use std::cell::RefCell;
+use std::rc::Rc;
 mod solve_problems;
 
 fn main() {
@@ -63,9 +66,44 @@ fn main() {
 
     // let result = solve_problems::lengeth_of_lat_word::length_of_last_word(s);
     // println!("{}", result);
-    let digits = vec![1, 9, 9];
-    let result = solve_problems::plus_one::plus_one(digits);
-    println!("{:?}", result)
+    // let digits = vec![1, 9, 9];
+    // let result = solve_problems::plus_one::plus_one(digits);
+    // println!("{:?}", result)
+    // let result = solve_problems::add_binary::add_binary("100".to_string(), "111".to_string());
+
+    // println!("{}", result);
+    // let x = 20;
+    // println!("{}", solve_problems::my_sqar::my_sqrt(x));
+
+    // let n = 45;
+    // println!("{}", solve_problems::climb_stairs::climb_stairs(n));
+
+    // let head = vec![1, 1, 2, 4, 5];
+    // let mut result = solve_problems::delete_duplicates::delete_duplicates(head);
+    // result.sort();
+    // println!("{:?}", result);
+
+    // let mut nums1 = vec![1, 2, 3, 45, 6, 7];
+    // let mut nums2 = vec![8, 9, 10, 20];
+    // let n = 3;
+    // let m = 4;
+
+    // let result = solve_problems::merge_sort_array::merge_sort_array(&mut nums1, m, &mut nums2, n);
+    // println!("{:?}", result);
+
+    let root = Rc::new(RefCell::new(TreeNode::new(1)));
+    let left = Rc::new(RefCell::new(TreeNode::new(2)));
+    let right = Rc::new(RefCell::new(TreeNode::new(3)));
+    let left_left = Rc::new(RefCell::new(TreeNode::new(4)));
+    let left_right = Rc::new(RefCell::new(TreeNode::new(5)));
+
+    left.borrow_mut().left = Some(left_left);
+    left.borrow_mut().right = Some(left_right);
+    root.borrow_mut().left = Some(left);
+    root.borrow_mut().right = Some(right);
+
+    println!("递归: {:?}", inorder_traversal(&Some(root.clone()))); // [4, 2, 1, 3]
+    // println!("迭代: {:?}", inorder_iterative(&Some(root))); // [4, 2, 1, 3]
 }
 
 // fn vec_to_list(nums: Vec<i32>) -> Option<Box<solve_problems::merge_two_lists::ListNode>> {
