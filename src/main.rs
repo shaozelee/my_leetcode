@@ -1,8 +1,8 @@
 #![allow(dead_code)]
 
-use solve_problems::inorder_traversal::*;
-use std::cell::RefCell;
-use std::rc::Rc;
+// use solve_problems::inorder_traversal::*;
+// use std::cell::RefCell;
+// use std::rc::Rc;
 mod solve_problems;
 
 fn main() {
@@ -91,19 +91,23 @@ fn main() {
     // let result = solve_problems::merge_sort_array::merge_sort_array(&mut nums1, m, &mut nums2, n);
     // println!("{:?}", result);
 
-    let root = Rc::new(RefCell::new(TreeNode::new(1)));
-    let left = Rc::new(RefCell::new(TreeNode::new(2)));
-    let right = Rc::new(RefCell::new(TreeNode::new(3)));
-    let left_left = Rc::new(RefCell::new(TreeNode::new(4)));
-    let left_right = Rc::new(RefCell::new(TreeNode::new(5)));
+    // let root = Rc::new(RefCell::new(TreeNode::new(1)));
+    // let left = Rc::new(RefCell::new(TreeNode::new(2)));
+    // let right = Rc::new(RefCell::new(TreeNode::new(3)));
+    // let left_left = Rc::new(RefCell::new(TreeNode::new(4)));
+    // let left_right = Rc::new(RefCell::new(TreeNode::new(5)));
 
-    left.borrow_mut().left = Some(left_left);
-    left.borrow_mut().right = Some(left_right);
-    root.borrow_mut().left = Some(left);
-    root.borrow_mut().right = Some(right);
+    // left.borrow_mut().left = Some(left_left);
+    // left.borrow_mut().right = Some(left_right);
+    // root.borrow_mut().left = Some(left);
+    // root.borrow_mut().right = Some(right);
 
-    println!("递归: {:?}", inorder_traversal(&Some(root.clone()))); // [4, 2, 1, 3]
+    // println!("递归: {:?}", inorder_traversal(&Some(root.clone()))); // [4, 2, 1, 3]
     // println!("迭代: {:?}", inorder_iterative(&Some(root))); // [4, 2, 1, 3]
+
+    // let num1 = 200;
+    // let num2 = 300;
+    // println!("max_num: {}", num1.max(num2));
 }
 
 // fn vec_to_list(nums: Vec<i32>) -> Option<Box<solve_problems::merge_two_lists::ListNode>> {
