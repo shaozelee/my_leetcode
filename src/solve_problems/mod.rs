@@ -23,3 +23,5 @@ pub mod str_str;
 pub mod two_sum;
 pub mod valid_parentheses;
 pub mod yh_sj;
+
+pub mod array_practice;

@@ -108,6 +108,25 @@ fn main() {
     // let num1 = 200;
     // let num2 = 300;
     // println!("max_num: {}", num1.max(num2));
+
+    let nums = vec![1, 1, 2, 2, 3, 3, 3];
+    let mut max_count = 0;
+    let mut majority = nums[0];
+    for i in 0..nums.len() {
+        let mut count = 0;
+
+        for j in 0..nums.len() {
+            // println!("nums[i] -> {} nums[j] -> {}", nums[i], nums[j]);
+            if nums[i] == nums[j] {
+                count += 1;
+            }
+        }
+        if count > max_count {
+            max_count = count;
+            majority = nums[i];
+        }
+    }
+    println!("{}", majority);
 }
 
 // fn vec_to_list(nums: Vec<i32>) -> Option<Box<solve_problems::merge_two_lists::ListNode>> {
