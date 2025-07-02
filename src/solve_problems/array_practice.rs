@@ -166,7 +166,7 @@ mod tests {
     }
     #[test]
     fn test_contains_duplicate() {
-        let nums = vec![1, 2, 3, 4, 5, 6];
+        let nums = vec![1, 2, 3, 4, 5, 6, 1];
         assert!(contains_duplicate(nums));
     }
     #[test]
