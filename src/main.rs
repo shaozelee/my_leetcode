@@ -109,24 +109,32 @@ fn main() {
     // let num2 = 300;
     // println!("max_num: {}", num1.max(num2));
 
-    let nums = vec![1, 1, 2, 2, 3, 3, 3];
-    let mut max_count = 0;
-    let mut majority = nums[0];
-    for i in 0..nums.len() {
-        let mut count = 0;
+    // let nums = vec![1, 1, 2, 2, 3, 3, 3];
+    // let mut max_count = 0;
+    // let mut majority = nums[0];
+    // for i in 0..nums.len() {
+    //     let mut count = 0;
 
-        for j in 0..nums.len() {
-            // println!("nums[i] -> {} nums[j] -> {}", nums[i], nums[j]);
-            if nums[i] == nums[j] {
-                count += 1;
-            }
-        }
-        if count > max_count {
-            max_count = count;
-            majority = nums[i];
-        }
-    }
-    println!("{}", majority);
+    //     for j in 0..nums.len() {
+    //         // println!("nums[i] -> {} nums[j] -> {}", nums[i], nums[j]);
+    //         if nums[i] == nums[j] {
+    //             count += 1;
+    //         }
+    //     }
+    //     if count > max_count {
+    //         max_count = count;
+    //         majority = nums[i];
+    //     }
+    // }
+    // println!("{}", majority);
+    let mut nums = vec![2, 1];
+    nums.sort_by(|a, b| match (a == &0, b == &0) {
+        (true, true) => std::cmp::Ordering::Equal, // 两元素均为0：顺序不变
+        (true, false) => std::cmp::Ordering::Greater, // a为0、b非零：a排到b后
+        (false, true) => std::cmp::Ordering::Less, // a非零、b为0：a排到b前
+        _ => a.cmp(b),                             // 两元素均非零：正常升序比较
+    });
+    println!("{:?}", nums);
 }
 
 // fn vec_to_list(nums: Vec<i32>) -> Option<Box<solve_problems::merge_two_lists::ListNode>> {
